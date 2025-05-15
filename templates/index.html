@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resume Checker – ATS Score</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <!-- Prevent Browser Back Cache -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+</head>
+
+<body>
+    
+    <div class="grid-container">
+        <!-- Left: Image -->
+        <div class="grid-left">
+            <img src="static/img/img.png" alt="Resume Impact">
+        </div>
+
+        <!-- Right: Resume Checker Content -->
+        <div class="grid-right">
+            <h3>RESUME CHECKER</h3>
+            <h1>Is your resume ready to <br> make an impact..?</h1>
+
+            <p>Fast and free AI resume checker that spots key improvements to help you stand out and get more interview calls!</p>
+
+            <div class="container">
+                <form action="/check_resume" id="resume-form" method="POST" enctype="multipart/form-data" autocomplete="off" >
+                    <span>Drag & Drop your resume here or<br> Choose File <small>(PDF, DOCX or TXT)</small></span>
+
+                    <!-- Upload Resume -->
+                    <div class="upload-container">
+                        <label for="resume-upload" class="upload-label">Upload Resume</label>
+                        <input type="file" id="resume-upload" name="resume" accept=".pdf,.docx,.txt" autocomplete="off">
+                    </div><br>
+
+                    <!-- Upload Job Description -->
+                    <span>Drop your job description here or <br>Browse to Upload<small> (PDF or DOCX)</small></span>
+                    <div class="upload-container">
+                        <label for="jobdesc-upload" class="upload-label">Upload Job Description</label>
+                        <input type="file" id="jobdesc-upload" name="jobdesc-file" accept=".pdf,.docx"  autocomplete="off" hidden>
+                    </div>
+
+                    <span><small>OR</small></span>
+                    <div class="textarea">
+                        <textarea id="jobdesc-textarea" name="jobdesc" rows="4" autocomplete="off"  placeholder="You can paste the job description text directly here...."></textarea>
+                    </div>
+
+                    <div class="button-container">
+                        <button class="button-73" type="submit">Check Resume</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resume Modal -->
+    <div id="resumeModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('resumeModal')">&times;</span>
+            ✅ Resume uploaded successfully!
+        </div>
+    </div>
+
+    <div id="resumeNotSelected" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('resumeNotSelected')">&times;</span>
+            ❌ Please select a resume file!
+        </div>
+    </div>
+
+    <!-- JD Modal -->
+    <div id="jdModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('jdModal')">&times;</span>
+            ✅ Job Description uploaded successfully!
+        </div>
+    </div>
+
+    <div id="JDNotSelected" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('JDNotSelected')">&times;</span>
+            ❌ Please add a job description!
+        </div>
+    </div>
+
+    <!-- Submit Modal -->
+    <div id="submitModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('submitModal')">&times;</span>
+            🚀 Submitting your resume for analysis. Please wait...
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(to left, #efecf2 0%, #e7f0fd 100%); 
+    margin: 0;
+    padding: 20px;
+  
+}
+
+.form-card {
+    max-width: 600px;
+    margin: 0 auto;
+    background-image: linear-gradient(-225deg, #ccfbed 0%, #ffd2f6 100%);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.result-line {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.label {
+    font-weight: bold;
+    width: 200px;
+    color: #000000;
+}
+
+.value {
+    flex: 1;
+    color: #2e2e2e;
+}
+
+.result-section {
+    margin-top: 20px;
+}
+
+.result-section .label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #333333;
+}
+
+.result-section .value {
+    color:#2e2e2e;
+}
+
+.result-section ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.result-section ul li {
+    margin-bottom: 5px;
+}
+.circular-progress {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: conic-gradient(#e0e0e0 0deg, #e0e0e0 360deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px auto;
+    position: relative;
+}
+
+.inner-circle {
+    width: 120px;
+    height: 120px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.percentage {
+    position: absolute;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333333;
+}
+/* .resume{
+   font-family: 'Segoe UI', sans-serif;
+
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+    
+}
+.form-card{
+    position: absolute;
+    top: 10%;
+    left: 30%;
+
+}
+.a1,.a8,.a7,.a2,.a3,.a4,.a5,.a6{
+     text-align: left;
+     border-radius: 50%;
+     position: relative;
+     left: 10%;
+     
+
+} */
+/* .a2{
+    text-align: center;
+    border: #f6f7fb;
+    border-radius: 5%;
+    box-sizing: border-box;
+}
+.a3{
+    text-align: center;
+    border: #f6f7fb;
+    border-radius: 5%;
+    box-sizing: border-box;
+}
+.a4{
+    text-align: center;
+}
+.a5{
+    text-align: center;
+}
+.a6{
+    text-align: center;
+}
+.a7{
+    text-align: center;
+}
+.a8{
+    text-align: center;
+} */

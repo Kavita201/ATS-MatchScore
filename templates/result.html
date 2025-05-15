@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ATS Analysis Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}">
+</head>
+<body>
+    <div class="form-card">
+        <h2>ATS Analysis Result</h2>
+
+        {% if result %}
+        <div class="circular-progress" data-percentage="{{ result.ATS_score }}">
+                <div class="inner-circle"></div>
+                <p class="percentage">{{ result.ATS_score }}</p>
+            </div>
+            <div class="result-line">
+                <span class="label">ATS Score:</span>
+                <span class="value">{{ result.ATS_score }}</span>
+            </div>
+            <!-- <div class="result-line">
+                <span class="label">Layout:</span>
+                <span class="value">{{ result.score_breakdown.layout }}</span>
+            </div> -->
+            <div class="result-line">
+                <span class="label">Skills:</span>
+                <span class="value">{{ result.score_breakdown.skills }}</span>
+            </div>
+            <div class="result-line">
+                <span class="label">Education:</span>
+                <span class="value">{{ result.score_breakdown.education }}</span>
+            </div>
+            <div class="result-line">
+                <span class="label">Experience:</span>
+                <span class="value">{{ result.score_breakdown.experience }}</span>
+            </div>
+            <div class="result-line">
+                <span class="label">Grammar:</span>
+                <span class="value">{{ result.score_breakdown.grammar }}</span>
+            </div>
+
+            <div class="result-section">
+                <div class="label">Missing Requirements:</div>
+                <div class="value">{{ result.missing_requirements | join(', ') }}</div>
+            </div>
+
+            <div class="result-section">
+                <div class="label">Improvement Suggestions:</div>
+                <div class="value">
+                    <ul>
+                        {% for suggestion in result.improvement_suggestion %}
+                            <li>{{ suggestion }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        {% else %}
+            <p>No result available. Please upload your resume and job description to begin analysis.</p>
+        {% endif %}
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const progressBar = document.querySelector(".circular-progress");
+            const percentage = parseInt(progressBar.getAttribute("data-percentage"));
+            const innerCircle = progressBar.querySelector(".inner-circle");
+            const color = percentage >= 75 ? "green" : percentage >= 55 ? "#FFC72C" : "red";
+            progressBar.style.background = `conic-gradient(${color} ${percentage * 3.6}deg, #e0e0e0 0deg)`;
+        });
+    </script>
+</body>
+</html>

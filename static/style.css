@@ -1,0 +1,298 @@
+
+/* === Popup Modal Styles === */
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed; /* <-- THIS IS IMPORTANT */
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+}
+
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.p{
+    position: relative;
+    top: 50%;
+    left: 60%;
+}
+
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f6f7fb;
+    margin: 0;
+    padding: 0;
+    background-image: radial-gradient(circle, #bbfecc, #bbffda, #bfffe6, #c6fff0, #d0fff7, #d0fdfb, #d2fbfd, #d5f9ff, #d2f4ff, #d8ecff, #e7e3ff, #f9d9fc);
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 40px;
+
+}
+
+.grid-left img {
+    width: 80%;
+    height: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    position: relative;
+    left: 50%;
+    top: 2%;
+}
+
+.grid-right {
+    top: -10%;
+    position: relative;
+    right: 100%;
+}
+
+
+.container {
+    max-width: 500px;
+    height: 350px;
+    margin: 50px;
+    padding: 30px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    position: relative;
+    top: 50px;
+    left: 10%;
+}
+
+h3 {
+    color: #8462ff;
+   
+    margin-bottom: 20px;
+    position: relative;
+    left: 100px;
+    top: 60px;
+}
+h1{
+    color: #333;
+   
+    margin-bottom: 20px;
+    position: relative;
+    left: 100px;
+    top: 50px;
+}
+
+.id {
+    display: flex;
+    align-items: center;
+    top:2%;
+}
+
+.id a{
+    margin: 0;
+    padding-right: 10px;
+    text-decoration: none;
+    color: #0097ef; 
+    position: relative;
+    left: 100px;
+    top: 50px;
+}
+.id p ,.id span{
+    margin: 0;
+    padding-right: 10px;
+    text-decoration: none;
+    color: #3f4040; 
+    position: relative;
+    left: 100px;
+    top: 50px;
+}
+p{
+    margin: 0;
+    padding-right: 10px;
+    text-decoration: none;
+    color: #3f4040; 
+    position: relative;
+    left: 100px;
+    top: 60px;
+
+}
+img{
+ 
+    position: relative;
+    margin-left: 70%;
+    top: 50px;
+}
+
+
+
+
+ 
+label {
+    font-weight: bold;
+    display: block;
+    top: 10px;
+    display: block;
+    text-align: center;
+    
+}
+/*
+input[type="file"],
+textarea {
+    width: 50%;
+    height: 50%;
+    margin-top: 5px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    resize: vertical;
+    
+} */
+
+#resume-upload {
+    display: none;
+}
+
+.upload-label {
+    cursor: pointer;
+    background-color: #de81f5;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    display: inline-block;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+/* Flexbox container to center Upload Resume button */
+.upload-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.upload-label:hover {
+    background-color: #b940ff;
+}
+
+span{
+    display: block;
+    text-align: center;
+}
+
+/* .upload-container1{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+} */
+/* .upload-label1 {
+    cursor: pointer;
+    background-color: #de81f5;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    display: inline-block;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+.upload-label1:hover {
+    background-color: #b940ff;
+} */
+
+/* Flexbox container to center Upload Resume button */
+
+
+/* .textarea textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    resize: vertical; /* optional: allow vertical resizing
+}
+
+
+textarea:focus {
+    border-color: #6f42c1;
+    outline: none;
+}  */
+.textarea {
+    width: 40%;  /* Adjust width */
+    text-align: center;
+    position: relative; /* To position its child (textarea) relative to itself */
+}
+
+.textarea textarea {
+    position: absolute;  
+    left: 125%;            
+    transform: translateX(-50%); 
+    width: 200%;  
+    height: 50px; 
+    padding: 10px;
+    font-size: 14px;
+    /* border: 1px solid #ccc; */
+    border-radius: 6px;
+    resize: vertical; 
+    background-color: #fbfbfbfc;
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 85px; /* Adjust spacing as needed */
+    position: relative;
+    left: 1%;
+
+  }
+
+.button-73 {
+    appearance: none;
+    background-color: #FFFFFF;
+    border-radius: 40em;
+    border-style: none;
+    box-shadow: #ADCFFF 0 -12px 6px inset;
+    box-sizing: border-box;
+    color: #000000;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    transition: all .15s;
+    touch-action: manipulation;
+  }
+  
+  .button-73:hover {
+    background-color:#f3c6fe;
+    box-shadow: #b864f8 0 -6px 8px inset;
+    transform: scale(1.125);
+  }
+  
+  .button-73:active {
+    transform: scale(1.025);
+  }
+  
+  @media (min-width: 600px) {
+    .button-73 {
+      font-size: 1rem;
+      padding: .75rem 2rem;
+    }
+  }
+
+
