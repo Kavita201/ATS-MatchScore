@@ -27,9 +27,9 @@ This is a Flask-based web application that analyzes your resume against a job de
 
 1. **Clone the repository**
 
-  git clone https://github.com/Kavita201/ATS-MatchScore.git
-  
-  cd ATS-MatchScore
+    git clone https://github.com/Kavita201/ATS-MatchScore.git
+    
+    cd ATS-MatchScore
 
 2. **Create a virtual environment**
 
